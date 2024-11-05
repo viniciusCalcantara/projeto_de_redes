@@ -35,7 +35,8 @@ def receive(s: socket.socket, chat_room_interface: ChatRoomInterface, stop_event
 
 def client_interface(s: socket.socket):
     client_interface = ClientInterface()
-    set_nickname(s, client_interface)
+    if set_nickname(s, client_interface) == None:
+        return
 
     chat_room_interface = ChatRoomInterface()
     message_queue = Queue()
