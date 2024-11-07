@@ -5,7 +5,6 @@ from threading import Thread
 PROCESS_ID = os.getpid()
 HOST = "127.0.0.1" 
 PORT = 65432
-MAX_CLIENTS = 10
 
 # The clients dictionary will store the client's connection as the key
 # and the client's nickname and address as the value in a dictionary.
